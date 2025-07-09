@@ -289,7 +289,7 @@ Menjadi:
 
 # 1.21 Refresh Halaman About
 
-Refresh tampilan pada alamat `http://localhost:8080/lab11_ci/ci4/public/about`
+Harus refresh Tamoilan about `http://localhost:8080/lab11_ci/ci4/public/about`
 <br>
 <img src="/IMAGE/1.21.png" img>
 
@@ -303,7 +303,7 @@ Refresh tampilan pada alamat `http://localhost:8080/lab11_ci/ci4/public/about`
 
 # 2.1 Buka Cmd
 
-Pastikan MySQL Server sudah dapat dijalankan melalui
+Buka cmd dan Pastikan MySQL Server sudah dapat dijalankan melalui
 XAMPP. Lalu jalankan perintah berikut:
 <br>
 <img src="/IMAGE/2.1.png" img>
@@ -335,7 +335,7 @@ PRIMARY KEY(id)
 
 # 2.3 Konfigurasi koneksi database
 
-Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server
+Selanjutnya kita membuat konfigurasi untuk menghubungkan dengan database server
 pada file .env
 <img src="/IMAGE/2.3.png" img>
 
@@ -403,7 +403,7 @@ Buka browser kembali, dengan mengakses url `http://localhost:8080/artikel`.
 
 # 2.8 Penambahan Data Dalam Database
 
-Belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
+Karna belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
 
 ```bash
 INSERT INTO artikel (judul, isi, slug) VALUE
@@ -428,7 +428,7 @@ Refresh kembali browser, sehingga akan ditampilkan hasilnya.
 
 # 2.10 Membuat Tampilan Detail Artikel
 
-Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada `Controller Artikel` dengan nama `view()`.
+Untuk saat ini judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada `Controller Artikel` dengan nama `view()`.
 
 ```bash
  public function view($slug)
@@ -454,7 +454,7 @@ Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berb
 
 # 2.11 Membuat View Detail
 
-Buat view baru untuk halaman detail dengan nama `app/views/artikel/detail.php`.
+Buatlah view baru untuk halaman detail dengan nama `app/views/artikel/detail.php`.
 
 ```bash
 <?= $this->include('template/header'); ?>
@@ -475,7 +475,7 @@ $artikel['judul']; ?>">
 
 # 2.12 Membuat Routing untuk artikel detail
 
-Buka Kembali file `app/config/Routes.php`, kemudian tambahkan routing untuk artikel detail.
+Lalu kita buat Kembali file `app/config/Routes.php`, kemudian tambahkan routing untuk artikel detail.
 
 ```bash
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
@@ -486,7 +486,7 @@ $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 
 # 2.13 Membuat Menu Admin
 
-Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada `Controller Artikel` dengan nama `admin_index()`.
+Menu admin adalah untuk proses CRUD data artikel. Lalu kita buat method baru pada `Controller Artikel` dengan nama `admin_index()`.
 
 ```bash
 public function admin_index()
@@ -503,7 +503,7 @@ public function admin_index()
 
 # 2.14 Buat View Admin
 
-Selanjutnya buat view untuk tampilan admin dengan nama `admin_index.php`.
+Selanjutnya kita  akan buat view untuk tampilan admin dengan nama `admin_index.php`.
 
 ```bash
 <?= $this->include('template/admin_header'); ?>
@@ -610,7 +610,7 @@ public function add()
 
 # 2.18 Buat View Untuk Form Add
 
-Buat dengan nama `form_add.php`.
+Buat dengan nama misalkan seperti ini `form_add.php`.
 
 ```bash
 <?= $this->include('template/admin_header'); ?>
